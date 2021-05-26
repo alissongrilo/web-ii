@@ -11,8 +11,8 @@ services:
       SERVICE_TAGS: dev
     working_dir: /var/www/html
     volumes:
-      - E:/cefet/laboratorio_aplicacoes_web/web2/www:/var/www/html
-      - E:/cefet/laboratorio_aplicacoes_web/web2/config/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+      - /home/alisson/atividade01/web2/www:/var/www/html
+      - /home/alisson/atividade01/web2/config/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
     networks:
       - cefetnet
 
@@ -25,8 +25,8 @@ services:
     ports:
       - "80:80"
     volumes:
-      - E:/cefet/laboratorio_aplicacoes_web/web2/www:/var/www/html
-      - E:/cefet/laboratorio_aplicacoes_web/web2/config/conf.d:/etc/nginx/conf.d
+      - /home/alisson/atividade01/web2/www:/var/www/html
+      - /home/alisson/atividade01/web2/config/conf.d:/etc/nginx/conf.d
     networks:
       - cefetnet
 
@@ -39,7 +39,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - E:/cefet/laboratorio_aplicacoes_web/web2/data:/var/lib/mysql
+      - /home/alisson/atividade01/web2/data:/var/lib/mysql
     environment:
       MARIADB_ROOT_PASSWORD: mariadb
       MARIADB_DATABASE: cefet
