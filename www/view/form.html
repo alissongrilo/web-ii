@@ -1,13 +1,14 @@
-<form method="POST" action="?acao=Form&metodo=salvar">
+  <form method="POST" action="?acao=Form&metodo=salvar">
+    <input type="hidden" name="id" value="{id}" />
 
-  <label>Título:</label>
-  <input type="varchar" name="titulo" required /><br />
+    <label>Título:</label>
+    <input type="varchar" name="titulo" value="{titulo}" required /><br />
 
-  <label>Autores:</label>
-  <textarea name="autores" required></textarea><br />
+    <label>Autores:</label>
+    <textarea name="autores" required>{autores}</textarea><br />
 
-  <label>Descrição:</label>
-  <input type="text" name="descricao" required /><br />
+    <label>Descrição:</label>
+    <input type="text" name="descricao" value="{descricao}" required /><br />
 
-  <button type="submit">Salvar</button>
-</form>
+    <button type="submit">Salvar</button>
+  </form>
